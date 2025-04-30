@@ -46,7 +46,7 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform -chdir=PARENTM/DEV  plan -input=false
+      run: terraform -chdir=dev  plan -input=false
 
     - name: Terraform Apply 
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
