@@ -8,9 +8,9 @@ terraform {
 
 backend "azurerm" {
 subscription_id = "2178b722-5baa-4418-8bc9-3fcb9cd14fed"
-    resource_group_name = "DevOpsRG"
-    storage_account_name = "stg2025n"
-    container_name = "devcont"
+    resource_group_name = "new-rg"
+    storage_account_name = "shanstg"
+    container_name = "shcont"
     access_key = "newdevv.tfstate"
   
 }
