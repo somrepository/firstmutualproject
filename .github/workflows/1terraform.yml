@@ -38,16 +38,16 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: terraform -chdir=PARENTM\DEV  init
+      run: terraform -chdir=PARENTM/DEV  init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Validate
-      run: terraform -chdir=PARENTM\DEV  validate 
+      run: terraform -chdir=PARENTM/DEV  validate 
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform -chdir=PARENTM\DEV  plan -input=false
+      run: terraform -chdir=PARENTM/DEV  plan -input=false
 
     - name: Terraform Apply 
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform -chdir=PARENTM\DEV apply -auto-approve -input=false 
+      run: terraform -chdir=PARENTM/DEV apply -auto-approve -input=false 
